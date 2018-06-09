@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  scroll = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onScroll(event) {
+    if (event) {
+      console.log('EVENT: ', event);
+    }
   }
 
 }

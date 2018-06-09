@@ -1,0 +1,19 @@
+section.sec1 {
+    background: url('../../assets/gmb.jpg');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    margin-top: 80px;
+}
+
+.content p {
+    width: 900px;
+    margin: 30px auto;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 30px;
+}
