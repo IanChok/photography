@@ -1,58 +1,58 @@
-nav {
+@mixin v-align($position: absolute){
+    position: $position;  top: 50%;  
+    transform: translateY(-50%);
+    -ms-transform:translateY(-50%); /* IE */
+    -moz-transform:translateY(-50%); /* Firefox */
+    -webkit-transform:translateY(-50%); /* Safari and Chrome */
+    -o-transform:translateY(-50%);
+}
+
+ nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 60px;
     padding: 10px 50px;
     box-sizing: border-box;
     transition: .3s;
-}
+    background:rgba(0,0,0,0.7);
 
-nav.black{
-    background: rbga(0,0,0,0.8);
-    height: 50px;
-    padding: 10px 50px;
-}
-
-nav .logo {
-    padding: 22px 20px;
-    height: 80px;
-    float: left;
+    & .logo {
+    @include v-align();
     font-size: 20px;
     transition: .3s;
-}
+    }
 
-nav.black .logo {
-    color: #fff;
-}
+    & ul {
+        @include v-align();
+        left: 100px;
+        list-style: none;
+        margin: 0;
+        display: flex;
+        width: 90%;
+        align-items: center;
 
-nav ul {
-    list-style: none;
-    float: left;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    
-}
+        & li {
+            list-style: none;
 
-nav ul li {
-    list-style: none;
-}
+            & a {
+                color: white;
+                padding: 12px 30px;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: .3s;
+            }
 
-nav ul li a {
-    line-height: 70px;
-    color: #151515;
-    padding: 12px 30px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: .3s;
-}
+            & a.game {
+                background:  #1aa3ff;
+                color: #fff;
+                border-radius: 6px;
+            }
+        }
 
-nav.black ul li a {
-    color: #fff;
-}
-
-nav ul li a:focus {
-    outline: none;
+        li:last-child {
+            margin-left: auto;
+        }
+    }
 }
