@@ -7,7 +7,7 @@
     -o-transform:translateY(-50%);
 }
 
- nav {
+@mixin nav-foundation {
     position: fixed;
     top: 0;
     left: 0;
@@ -16,7 +16,10 @@
     padding: 10px 50px;
     box-sizing: border-box;
     transition: .3s;
-    background:rgba(0,0,0,0.7);
+}
+
+ nav {
+    @include nav-foundation;
 
     & .logo {
     @include v-align();
@@ -37,7 +40,7 @@
             list-style: none;
 
             & a {
-                color: white;
+                color: black;
                 padding: 12px 30px;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -45,7 +48,8 @@
             }
 
             & a.game {
-                background:  #1aa3ff;
+                // background:  #1aa3ff;
+                background: #E2472f;
                 color: #fff;
                 border-radius: 6px;
             }
@@ -54,5 +58,18 @@
         li:last-child {
             margin-left: auto;
         }
+    }
+}
+
+nav.black {
+    @include nav-foundation;
+    background:rgba(0,0,0,0.7);
+
+    & .logo {
+        color: white;
+    }
+
+    & ul li a {
+        color: white;
     }
 }
