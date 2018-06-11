@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-declare var $: any;
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-navbar',
@@ -14,12 +14,10 @@ export class NavbarComponent implements OnInit {
   }
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
-    $(window).on('scroll', function() {
       if ($(window).scrollTop()) {
         $('#navBar').addClass('black');
       } else {
         $('#navBar').removeClass('black');
       }
-    });
   }
 }
