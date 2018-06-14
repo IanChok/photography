@@ -8,6 +8,8 @@ import * as $ from 'jquery';
 })
 export class NavbarComponent implements OnInit {
 
+  onScroll = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -15,9 +17,9 @@ export class NavbarComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
       if ($(window).scrollTop()) {
-        $('#navBar').addClass('black');
+        this.onScroll = true;
       } else {
-        $('#navBar').removeClass('black');
+        this.onScroll = false;
       }
   }
 }

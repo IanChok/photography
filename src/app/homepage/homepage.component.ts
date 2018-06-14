@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import * as $ from 'jquery';
+
 
 @Component({
   selector: 'app-homepage',
@@ -12,4 +14,8 @@ export class HomepageComponent implements OnInit {
   ngOnInit() {
   }
 
+  @HostListener('window:scroll', ['$event']) onscroll(event) {
+    const wScroll = $(window).scrollTop();
+    $('.sec1').css('background-position', 'center ' + (-wScroll) / 4 + 'px');
+  }
 }

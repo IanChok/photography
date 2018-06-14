@@ -20,15 +20,21 @@
 
  nav {
     @include nav-foundation;
-
+    z-index: 100;
     & .logo {
     @include v-align();
-    font-size: 20px;
+    font-size: 30px;
     transition: 1s;
+    text-transform: uppercase;
+    font-family: 'Shadows Into Light', cursive;
+
     }
 
     & ul {
-        @include v-align();
+        position: absolute;
+        // @include v-align();
+        top: 50%;
+        bottom: 50%;
         left: 100px;
         list-style: none;
         margin: 0;
@@ -55,7 +61,7 @@
             }
         }
 
-        li:last-child {
+        li:first-child {
             margin-left: auto;
         }
     }
