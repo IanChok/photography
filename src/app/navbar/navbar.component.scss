@@ -23,8 +23,11 @@
     z-index: 100;
     & .logo {
     @include v-align();
-    font-size: 20px;
+    font-size: 30px;
     transition: 1s;
+    text-transform: uppercase;
+    font-family: 'Shadows Into Light', cursive;
+
     }
 
     & ul {
@@ -58,7 +61,7 @@
             }
         }
 
-        li:last-child {
+        li:first-child {
             margin-left: auto;
         }
     }
