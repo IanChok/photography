@@ -1,19 +1,59 @@
-section.sec1 {
-    background: url('../../assets/imgs/background4.jpg');
-    height: 100vh;
+.sec1 {
+    background: url('../../assets/imgs/background4.jpg') no-repeat;
     width: 100%;
     background-size: cover;
-    background-position: center;
+    // background-position: center;
+    height: 100vh;
+}
+
+.text-greet {
+    position: absolute;
+    margin: 0;
+    font-size: 75px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // font-family: 'Permanent Marker', cursive;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: normal;
+    text-align: center;
+    
 }
 
 .content {
-    margin-top: 80px;
+    margin:0;
+
+    & p {
+        width: 900px;
+        margin: 30px auto;
+        text-align: justify;
+        font-size: 20px;
+        line-height: 30px;
+        height: 100%;
+    }
 }
 
-.content p {
-    width: 900px;
-    margin: 30px auto;
-    text-align: justify;
-    font-size: 20px;
-    line-height: 30px;
+.sec2{
+    background:linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.9)), url(../../assets/imgs/background5.jpg);
+    background-size: cover;
+    min-height: 100%;
+    height: auto;
+    margin-top: -30px;
 }
+
+.content-img1 img {
+    content: url(../../assets/imgs/background1.jpg);
+    display: block;
+    max-width: 70%;
+    max-height: 700px;
+    width: auto;
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    border-radius: 8px;
+    box-shadow: #555 1px 1px 8px 1px;
+    box-sizing: border-box;
+}
+
+
