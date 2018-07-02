@@ -16,6 +16,6 @@ export class HomepageComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event']) onscroll(event) {
     const wScroll = $(window).scrollTop();
-    $('.sec1').css('background-position', 'center ' + (-wScroll) / 4 + 'px');
+    $('.sec1').css('background-position', 'center ' + (wScroll) / 5 + 'px');
   }
 }
